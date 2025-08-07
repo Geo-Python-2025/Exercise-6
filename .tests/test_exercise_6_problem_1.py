@@ -83,7 +83,7 @@ class TestProblem1:
 
     ###Problem 2###
 
-    @points(3.0, "Problem 2, Part 1: Did you correctly read the csv file into the dataframe 'data'?")
+    @points(1.0, "Problem 2, Part 1: Did you correctly read the csv file into the dataframe 'data'?")
     def test_problem_2_part_1_df(self, problem1):
         section_data, namespace = problem1
         section = "Part 3"  # Define the section key
@@ -97,35 +97,6 @@ class TestProblem1:
         # Assert that 'data' is a DataFrame
         assert isinstance(namespace['monthly_data'], pd.DataFrame)
 
-
-    @points(3.0, "Problem 2, Part 1: Did you create a DataFrame 'monthly_data' ?")
-    def test_problem_2_part_1_df(self, problem1):
-        section_data, namespace = problem1
-        section = "Part 3"  # Define the section key
-
-        # Check if section exists in the dictionary
-        assert section in section_data, f"Section '{section}' not found in section_data"
-
-        # Extract variables from section data
-        variables = section_data[section]['variables']
-
-        # Assert that 'data' is a DataFrame
-        assert isinstance(namespace['monthly_data'], pd.DataFrame)
-
-
-    @points(1.0, "Problem 2, Part 1: Did you create a DataFrame 'monthly_data' ?")
-    def test_problem_2_part_1_df(self, problem1):
-        section_data, namespace = problem1
-        section = "Part 3"  # Define the section key
-
-        # Check if section exists in the dictionary
-        assert section in section_data, f"Section '{section}' not found in section_data"
-
-        # Extract variables from section data
-        variables = section_data[section]['variables']
-
-        # Assert that 'data' is a DataFrame
-        assert isinstance(namespace['monthly_data'], pd.DataFrame)
 
 
     @points(1.0, "Problem 2, Part 1: Something is wrong with the 'monthly_data' DataFrame!")
@@ -162,8 +133,10 @@ class TestProblem1:
         assert round(monthly_data['temp_celsius'].median(), 2) == 4.73
 
 
+    ### Problem 3 ###
 
-    @points(1.0, "Problem 3, Part 1: Does the 'monthly_data' DataFrame contain the correct columns?")
+    
+    @points(2.0, "Problem 3, Part 1: Does the 'monthly_data' DataFrame contain the correct columns?")
     def test_problem_3_part_1_temp_celsius(self, problem1):
         section_data, namespace = problem1
         section = "Part 4"  # Define the section key
@@ -180,7 +153,7 @@ class TestProblem1:
         assert 'month' in answer_columns and 'diff' in answer_columns and 'ref_temp' in answer_columns
 
     
-    @points(1.0, "Problem 3, Part 2: Something is wrong with the values of the 'diff' column!")
+    @points(2.0, "Problem 3, Part 2: Something is wrong with the values of the 'diff' column!")
     def test_problem_3_part_2_diff(self, problem1):
         section_data, namespace = problem1
         section = "Part 5"  # Define the section key
