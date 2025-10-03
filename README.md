@@ -6,7 +6,7 @@ The aim of this exercise is to analyze historical weather data and weather anoma
 
 ## Completing the exercise
 
-- **Exercise 6 is due by the start of the next lesson (9:15 am, October 14th, 2024)**.
+- **Exercise 6 is due by the start of the next lesson**.
 - **Remember to save and commit your changes locally, and push your changes to GitHub after each major change**!
 - **[Working in pairs](https://geo-python-site.readthedocs.io/en/latest/lessons/L2/why-pairs.html) is optional on this exercise**. If you prefer to work alone, please be sure to inform the course assistants. Otherwise, and we will only grade the repository of the member of your pair that is responsible for this week's exercise.
 
