@@ -13,7 +13,7 @@ jobs:
   grade-assignment:
     name: Compute a preliminary grade
     runs-on: ubuntu-latest
-    container: python:3.13
+    container: python:3.13.2
     steps:
       - name: Checkout head
         uses: actions/checkout@v3
@@ -43,7 +43,6 @@ jobs:
         uses: Geo-Python-2025/create-or-update-comment@v4
         env: ${{ fromJSON(steps.grading.outputs.FEEDBACK) }}
         with:
-          
           issue-number: ${{ github.event.pull_request.number }}
           body: ${{ env.body }}
           reactions: ${{ env.reaction }}
